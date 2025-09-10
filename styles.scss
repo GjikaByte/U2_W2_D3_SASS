@@ -1,68 +1,27 @@
 /* =========================================================
    VARIABLES (colors, fonts, sizes)
    ========================================================= */
-$color-text: #f4f4f4;
-$btn-blue:   #0e6cff;
-$btn-orange: #ff8700;
-$btn-green:  #4caf50;
-$bg-hero:    #640fc5;
 
-$ff-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-
-$fs-100: .875rem;
-$fs-200: 1rem;
-$fs-300: 1.25rem;
-$fs-400: 1.5rem;
-$fs-hero: clamp(2rem, 3.5vw + .5rem, 4rem);
 
 /* =========================================================
    MIXINS
    ========================================================= */
-@mixin title-big($color: $color-text) {
-  font-family: $ff-base;
-  font-weight: 800;
-  font-size: $fs-hero;
-  line-height: 1.1;
-  color: $color;
-}
+
 
 /* =========================================================
    RESET (common minimal reset)
    ========================================================= */
-*, *::before, *::after { box-sizing: border-box; }
-html, body { height: 100%; }
-body { margin: 0; font-family: $ff-base; }
-img { display: block; max-width: 100%; height: auto; }
-h1, h2, h3, h4, h5, h6, p { margin: 0 0 .75rem; }
-ul, ol { margin: 0; padding-left: 1rem; }
-a { text-decoration: none; color: inherit; }
+
 
 /* =========================================================
    THEME OVERRIDES (Bootstrap buttons recolored)
    ========================================================= */
-.btn-primary {
-  background-color: $btn-blue;
-  border-color: $btn-blue;
-  &:hover { background-color: darken($btn-blue, 6%); border-color: darken($btn-blue, 6%); }
-}
 
-.btn-warning {
-  color: #000;
-  background-color: $btn-orange;
-  border-color: $btn-orange;
-  &:hover { background-color: darken($btn-orange, 6%); border-color: darken($btn-orange, 6%); }
-}
-
-.btn-success {
-  background-color: $btn-green;
-  border-color: $btn-green;
-  &:hover { background-color: darken($btn-green, 6%); border-color: darken($btn-green, 6%); }
-}
 
 /* =========================================================
    HERO
    ========================================================= */
-header#home, .header {
+header #home {
   background: $bg-hero;
   color: $color-text;
 
@@ -78,17 +37,3 @@ header#home, .header {
 /* =========================================================
    HELPERS (animations / hover effects)
    ========================================================= */
-/* Fade-in + slight drop for hero elements */
-.reveal {
-  opacity: 0;
-  transform: translateY(-15px);
-  animation: fadeDown .6s ease-out .1s forwards;
-}
-@keyframes fadeDown {
-  50% { opacity: .5; transform: translateY(-10px); }
-  to  { opacity: 1;  transform: translateY(0); }
-}
-
-/* Subtle button lift on hover */
-.btn-lift { transition: transform .18s ease, box-shadow .18s ease; }
-.btn-lift:hover { transform: translateY(-2px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); }

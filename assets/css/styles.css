@@ -100,30 +100,4 @@ header#home section, .header section {
 
 /* =========================================================
    HELPERS (animations / hover effects)
-   ========================================================= */
-/* Fade-in + slight drop for hero elements */
-.reveal {
-  opacity: 0;
-  transform: translateY(-15px);
-  animation: fadeDown 0.6s ease-out 0.1s forwards;
-}
-
-@keyframes fadeDown {
-  50% {
-    opacity: 0.5;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Subtle button lift on hover */
-.btn-lift {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.btn-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}/*# sourceMappingURL=styles.css.map */
+   ========================================================= *//*# sourceMappingURL=styles.css.map */

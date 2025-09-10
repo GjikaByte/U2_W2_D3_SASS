@@ -1,0 +1,7 @@
+@mixin title-big($color: $color-text) {
+  font-family: $ff-base;
+  font-weight: 800;
+  font-size: $fs-hero;
+  line-height: 1.1;
+  color: $color;
+}
