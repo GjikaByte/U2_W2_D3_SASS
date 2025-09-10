@@ -1,0 +1,129 @@
+/* =========================================================
+   VARIABLES (colors, fonts, sizes)
+   ========================================================= */
+/* =========================================================
+   MIXINS
+   ========================================================= */
+/* =========================================================
+   RESET (common minimal reset)
+   ========================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 0.75rem;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================================
+   THEME OVERRIDES (Bootstrap buttons recolored)
+   ========================================================= */
+.btn-primary {
+  background-color: #0e6cff;
+  border-color: #0e6cff;
+}
+.btn-primary:hover {
+  background-color: rgb(0, 92.9858921162, 238.4);
+  border-color: rgb(0, 92.9858921162, 238.4);
+}
+
+.btn-warning {
+  color: #000;
+  background-color: #ff8700;
+  border-color: #ff8700;
+}
+.btn-warning:hover {
+  background-color: rgb(224.4, 118.8, 0);
+  border-color: rgb(224.4, 118.8, 0);
+}
+
+.btn-success {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+.btn-success:hover {
+  background-color: rgb(66.7346613546, 153.6653386454, 70.2470119522);
+  border-color: rgb(66.7346613546, 153.6653386454, 70.2470119522);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+header#home, .header {
+  background: #640fc5;
+  color: #f4f4f4;
+  /* keep any existing structure you had */
+}
+header#home h1, .header h1 {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 3.5vw + 0.5rem, 4rem);
+  line-height: 1.1;
+  color: #f4f4f4;
+}
+header#home p.lead, .header p.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+}
+header#home img, .header img {
+  border-radius: 0.75rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+header#home section, .header section {
+  margin: auto;
+}
+
+/* =========================================================
+   HELPERS (animations / hover effects)
+   ========================================================= */
+/* Fade-in + slight drop for hero elements */
+.reveal {
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: fadeDown 0.6s ease-out 0.1s forwards;
+}
+
+@keyframes fadeDown {
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Subtle button lift on hover */
+.btn-lift {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}/*# sourceMappingURL=styles.css.map */
