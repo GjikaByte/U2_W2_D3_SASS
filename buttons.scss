@@ -1,18 +1,19 @@
-.btn-primary {
-  background-color: $btn-blue;
-  border-color: $btn-blue;
-  &:hover { background-color: darken($btn-blue, 6%); border-color: darken($btn-blue, 6%); }
-}
+$btn-colors: (
+  primary: $btn-blue,
+  warning: $btn-orange,
+  success: $btn-green
+);
 
-.btn-warning {
-  color: #000;
-  background-color: $btn-orange;
-  border-color: $btn-orange;
-  &:hover { background-color: darken($btn-orange, 6%); border-color: darken($btn-orange, 6%); }
-}
-
-.btn-success {
-  background-color: $btn-green;
-  border-color: $btn-green;
-  &:hover { background-color: darken($btn-green, 6%); border-color: darken($btn-green, 6%); }
+@each $name, $color in $btn-colors {
+  .btn-#{$name} {
+    @if $name == warning {
+      color: #000;
+    }
+    background-color: $color;
+    border-color: $color;
+    &:hover {
+      background-color: darken($color, 6%);
+      border-color: darken($color, 6%);
+    }
+  }
 }
