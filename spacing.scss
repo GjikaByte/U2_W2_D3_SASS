@@ -1,0 +1,31 @@
+$directions: block, inline;
+
+$dimensions: (
+    sm: 10px,
+    normal: 15px,
+    md: 20px,
+    lg: 30px,
+    xl: 40px,
+    xxl: 50px
+);
+
+.margin {
+    margin: 1rem;
+}
+
+.padding {
+    padding: 1rem;
+}
+
+@each $direction in $directions {
+    @each $size-name, $size-value in $dimensions {
+        .margin-#{$size-name}-#{$direction} {
+            margin-#{$direction}: $size-value;
+        }
+
+        .padding-#{$size-name}-#{$direction} {
+            padding-#{$direction}: $size-value;
+        }
+    }
+}
+
