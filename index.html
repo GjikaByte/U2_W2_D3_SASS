@@ -17,7 +17,7 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm  top-0">
     <div class="container-fluid px-3 px-lg-4">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
         <img src="https://dummyimage.com/36x36/0d6efd/ffffff.png&text=Λ" alt="Logo" width="36" height="36" class="rounded">
@@ -46,9 +46,7 @@
         <!-- Copy -->
         <div class="col-12 col-lg-6">
           <h1 class="display-5 fw-bold mb-3 reveal">Benvenuto!</h1>
-          <p class="lead mb-4 reveal">
-            Headline con breve descrizione. Costruiamo interfacce veloci e responsive con Bootstrap e SCSS.
-          </p>
+            <p class="fs-4 mb-4 reveal">Headline con breve descrizione. Costruiamo interfacce veloci e responsive con Bootstrap e SCSS.</p>
 
           <div class="d-flex flex-wrap gap-3 reveal">
             <a href="#about"   class="btn btn-primary btn-lg btn-lift">Scopri di più</a>
@@ -61,7 +59,7 @@
         <div class="col-12 col-lg-6 text-center">
           <img
             src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1400&auto=format&fit=crop"
-            class="img-fluid rounded shadow-lg reveal" alt="Hero image">
+            class="img-fluid rounded shadow-lg reveal z-0" alt="Hero image">
         </div>
       </div>
     </div>
@@ -69,8 +67,8 @@
 
   <!-- GRID (4 items) -->
   <section class="py-5 bg-white" id="about">
-    <div class="container-fluid px-3 px-lg-4">
-      <div class="row row-cols-2 row-cols-md-4 g-3 g-lg-4">
+    <div class="container-fluid">
+      <div class="row row-cols-2 row-cols-md-4">
         <!-- Card 1 -->
         <div class="col">
           <div class="card h-100 shadow-sm">
@@ -117,7 +115,7 @@
 
   <!-- Placeholder sections for anchors -->
   <section id="services" class="py-5">
-    <div class="container">
+    <div class="container-fluid px-3 px-lg-4">
       <h2 class="h3">Servizi</h2>
       <p class="text-muted">Contenuto di esempio per la sezione servizi…</p>
     </div>
